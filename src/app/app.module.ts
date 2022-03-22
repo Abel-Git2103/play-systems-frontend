@@ -15,6 +15,7 @@ import { GameExplorerComponent } from './home-components/game-explorer/game-expl
 import { ChatComponent } from './chat-components/chat/chat.component';
 import { GroupCreationComponent } from './group-creation/group-creation.component';
 import { ProfileComponent } from './profile/profile.component';
+import { LoginContainerComponent } from './login-components/login-container/login-container.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ProfileComponent } from './profile/profile.component';
     GameExplorerComponent,
     ChatComponent,
     GroupCreationComponent,
-    ProfileComponent
+    ProfileComponent,
+    LoginContainerComponent
   ],
   imports: [
     BrowserModule,
