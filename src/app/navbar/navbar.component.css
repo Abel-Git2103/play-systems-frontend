@@ -1,0 +1,47 @@
+body {
+  background-color: rgb(175, 175, 175);
+}
+
+.icono {
+
+  font-size: 25px;
+  color: white;
+  margin-right: 3%;
+}
+
+.buscar {
+  margin-right: 2%;
+}
+
+.boton {
+  background-color: rgb(148, 178, 216);
+}
+
+
+.final {
+  color: rgb(55, 55, 156);
+  font-size: 30px;
+  margin-right: 0%;
+}
+
+.box1 {
+  height: 25px;
+  width: 100%;
+  background-color: rgb(216, 216, 216);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.bar {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.inicio {
+  margin-left: 1%;
+}
+
+.final2 {
+  float: right;
+  margin-right: 1%;
+}
