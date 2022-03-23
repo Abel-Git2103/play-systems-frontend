@@ -3,6 +3,10 @@
   overflow: scroll;
   overflow-x: hidden;
   height: 85%;
+  scrollbar-color: #344D90 rgba(235, 40, 40, 0);
+  scrollbar-width: thin;
+  background-color: #d8e2e6;
+
 }
 
 .alinear {
@@ -16,7 +20,7 @@ a {
 }
 
 .card {
-  background-color: rgb(226, 0, 116);
+  background-color: #344D90;
   border: none;
   border-radius: 15px;
 }
