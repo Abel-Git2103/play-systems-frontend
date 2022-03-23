@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login-components/login/login.component';
-import { AboutComponent } from './login-components/about/about.component';
 import { RegisterComponent } from './register/register.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home-components/home/home.component';
@@ -15,7 +14,6 @@ import { GameExplorerComponent } from './home-components/game-explorer/game-expl
 import { ChatComponent } from './chat-components/chat/chat.component';
 import { GroupCreationComponent } from './group-creation/group-creation.component';
 import { ProfileComponent } from './profile/profile.component';
-import { LoginContainerComponent } from './login-components/login-container/login-container.component';
 
 @NgModule({
   declarations: [
@@ -26,19 +24,14 @@ import { LoginContainerComponent } from './login-components/login-container/logi
     HomeComponent,
     MyGroupsComponent,
     GroupListComponent,
-    AboutComponent,
     MessagesComponent,
     GameExplorerComponent,
     ChatComponent,
     GroupCreationComponent,
     ProfileComponent,
-    LoginContainerComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

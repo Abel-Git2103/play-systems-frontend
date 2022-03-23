@@ -3,27 +3,22 @@ import { RouterModule, Routes } from '@angular/router';
 import { ChatComponent } from './chat-components/chat/chat.component';
 import { GroupCreationComponent } from './group-creation/group-creation.component';
 import { HomeComponent } from './home-components/home/home.component';
-import { AboutComponent } from './login-components/about/about.component';
-import { LoginContainerComponent } from './login-components/login-container/login-container.component';
+import { LoginComponent } from './login-components/login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: LoginContainerComponent,
+    component: LoginComponent,
   },
   {
     path: 'login',
-    component: LoginContainerComponent,
+    component: LoginComponent,
   },
   {
     path: 'register',
     component: RegisterComponent,
-  },
-  {
-    path: 'about',
-    component: AboutComponent,
   },
   {
     path: 'home',
