@@ -1,0 +1,6 @@
+.box {
+  width: max-content;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 85%;
+}
