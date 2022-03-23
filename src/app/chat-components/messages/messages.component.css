@@ -1,0 +1,11 @@
+.mensaje {
+  width: 98rem;
+  height: 48rem;
+  border-radius: 15px;
+}
+
+.enviar {
+  display: flex;
+  justify-content: right;
+
+}

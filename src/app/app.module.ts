@@ -14,6 +14,7 @@ import { GameExplorerComponent } from './home-components/game-explorer/game-expl
 import { ChatComponent } from './chat-components/chat/chat.component';
 import { GroupCreationComponent } from './group-creation/group-creation.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { ProfileComponent } from './profile/profile.component';
     GroupCreationComponent,
     ProfileComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
