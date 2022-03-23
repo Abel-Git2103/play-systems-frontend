@@ -4,3 +4,24 @@
   overflow-x: hidden;
   height: 85%;
 }
+
+.alinear {
+  text-decoration: none;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.card {
+  background-color: rgb(226, 0, 116);
+  border: none;
+  border-radius: 15px;
+}
+
+img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
