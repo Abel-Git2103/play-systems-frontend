@@ -1,18 +1,16 @@
+.container{
+  text-align: center;
+  margin-top: 5px;
+}
 .bar {
-  border-radius: 5px;
+  border-radius: 20px;
   background-color: rgb(226, 0, 116);
 }
-
 .nav-link {
   color: white;
-  font-family: 'TeleNeoWeb-Regular',sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
 }
-
-.navbar-toggler {
-  background-color: white;
-  color: rgb(172, 0, 89);
+a{
+  margin-top: 12px;
 }
-
-
-
