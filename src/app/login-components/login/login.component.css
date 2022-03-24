@@ -14,14 +14,6 @@
   font-family: "TeleNeoWeb-Regular", sans-serif;
 }
 
-#btnregistro {
-  width: 28vw;
-}
-
-#btnacceder {
-  width: 28vw;
-}
-
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
