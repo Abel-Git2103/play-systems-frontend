@@ -1,5 +1,9 @@
+.nav-item{
+  font-size: 24px;
+}
+
 .navbar-toggler {
-  background-color: #E7552C;
+  background-color: #d8e2e6;
 }
 
 li a {
@@ -7,7 +11,7 @@ li a {
 }
 
 li a:hover {
-  background-color: #E7552C;
+  background-color: #e3eaec75;
 }
 
 /* .bar {
