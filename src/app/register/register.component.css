@@ -1,5 +1,12 @@
 .contenedor{
-  background: linear-gradient(#344D90, white);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('\src\assets\img\fondologin.jpg');
+}
+.logo{
+  padding-top: 155px;
+  background-color: black;
 }
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
   font-size: 1rem;
