@@ -1,6 +1,8 @@
 #main {
   height: 100vh;
-  background-color: #344d90;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('\src\assets\img\fondologin.jpg');
 }
 
 .card-group {
@@ -12,6 +14,23 @@
   font-size: 50px;
   font-weight: 700;
   font-family: "TeleNeoWeb-Regular", sans-serif;
+}
+
+h5 {
+  margin-top: 2rem;
+}
+
+.about {
+  background-color: #344d90;
+}
+
+#btnregistro {
+  margin-left: 1rem;
+  background-color: #E7552C;
+}
+
+#btnacceder {
+  background-color: #E7552C;
 }
 
 @media (min-width: 576px) {
