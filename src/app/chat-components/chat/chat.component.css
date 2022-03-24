@@ -8,3 +8,8 @@
 .zona-chat {
   background-color: #ffffff;
 }
+
+.messages {
+  display: flex;
+  justify-content: right;
+}
