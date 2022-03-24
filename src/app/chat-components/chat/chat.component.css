@@ -8,8 +8,14 @@
   background-color: #d8e2e6;
 }
 
+.chat-nav {
+  width: max-content;
+  height: 830px;
+  background-color: #d8e2e6;
+}
+
 .container {
-  background-color: aqua;
+  background-color: #d8e2e6;
   max-width: 100vw;
   min-height: 100vh;
   padding: 15px;

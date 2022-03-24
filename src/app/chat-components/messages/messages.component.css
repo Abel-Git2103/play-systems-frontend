@@ -1,19 +1,30 @@
 .mensajes {
   max-width: 98rem;
   max-height: 48rem;
+  border-radius: 15px;
+  background-color: #daf3fd;
+  padding: 1%;
+  vertical-align: middle;
+  border: solid 1px #344D90;
+  color: #E7552C;
 
 }
 
 .enviar {
   display: flex;
   justify-content: right;
-
 }
 
-.contenedor-mensajes{
+.contenedor-mensajes {
   text-align: left;
   padding: 10px;
   height: 90%;
+  border-radius: 5px;
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-color: #344d90 rgba(235, 40, 40, 0);
+  scrollbar-width: thin;
+  background-color: #344D90;
   border-radius: 5px;
 
 }
@@ -22,17 +33,29 @@
   min-width: 78.8vw;
 }
 
+.boton-enviar {
+  background-color: #E7552C;
+  border-radius: 5px;
+  color: white;
+  border: none;
+}
+
 
 @media only screen and (max-width: 1366px) {
 
   .mensajes {
     max-width: 50rem;
     max-height: 26rem;
+    background-color: #daf3fd;
+    padding: 1%;
+    border: solid 1px rgb#344D90;
+    color: #E7552C;
 
   }
 
   .caja-mensaje {
     min-width: 46vw;
   }
+
 
 }
