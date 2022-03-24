@@ -1,7 +1,8 @@
 .mensaje {
-  width: 98rem;
-  height: 48rem;
+  max-width: 98rem;
+  max-height: 48rem;
   border-radius: 15px;
+
 }
 
 .enviar {
