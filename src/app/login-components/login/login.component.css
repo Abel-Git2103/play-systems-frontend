@@ -10,11 +10,13 @@
 }
 
 #titulo {
-  padding-top: 5%;
+  padding-top: 10%;
   font-size: 50px;
   font-weight: 700;
   font-family: "TeleNeoWeb-Regular", sans-serif;
   margin-bottom: 2rem;
+  color: white;
+  text-align: center;
 }
 
 h5 {
