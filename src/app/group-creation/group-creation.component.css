@@ -1,8 +1,11 @@
 .contenedor {
   height: 100vh;
-  background-color: #5cc5ef;
+  background-color: #d8e2e6;
 }
 
+.register {
+  background-color: #e7552c;
+}
 .select-css {
   display: block;
   font-size: 16px;
@@ -42,4 +45,28 @@
 }
 .select-css option {
   font-weight: normal;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
 }
