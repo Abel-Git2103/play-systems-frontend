@@ -1,0 +1,9 @@
+.mygroups-nav{
+  width: max-content;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 85%;
+  scrollbar-color: #344D90 rgba(235, 40, 40, 0);
+  scrollbar-width: thin;
+  background-color: #d8e2e6;
+}
