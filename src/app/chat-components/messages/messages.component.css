@@ -5,8 +5,9 @@
   background-color: #daf3fd;
   padding: 1%;
   vertical-align: middle;
-  border: solid 1px #344D90;
-  color: #E7552C;
+  /* border: solid 1px #344D90; */
+  color: #344D90;
+  ;
 
 }
 
@@ -26,7 +27,6 @@
   scrollbar-width: thin;
   background-color: #344D90;
   border-radius: 5px;
-
 }
 
 .caja-mensaje {
@@ -40,6 +40,30 @@
   border: none;
 }
 
+.alinear {
+  display: flex;
+  align-items: center;
+}
+
+.boton-eliminar {
+  background-color: rgb(238, 99, 99);
+  border-radius: 5px;
+  border: none;
+  padding: 0.3%;
+
+}
+
+.icono {
+  font-size: 15px;
+  color: rgb(243, 213, 213);
+}
+
+.icono-basura {
+  text-align: end;
+}
+
+
+
 
 @media only screen and (max-width: 1366px) {
 
@@ -48,8 +72,9 @@
     max-height: 26rem;
     background-color: #daf3fd;
     padding: 1%;
-    border: solid 1px rgb#344D90;
-    color: #E7552C;
+    /* border: solid 1px rgb#344D90; */
+    color: #344D90;
+    ;
 
   }
 
