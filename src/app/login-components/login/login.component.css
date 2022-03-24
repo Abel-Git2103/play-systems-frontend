@@ -16,6 +16,10 @@
   font-family: "TeleNeoWeb-Regular", sans-serif;
 }
 
+h1 {
+  margin-bottom: 2rem;
+}
+
 h5 {
   margin-top: 2rem;
 }
