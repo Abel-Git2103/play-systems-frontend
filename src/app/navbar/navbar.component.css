@@ -1,3 +1,13 @@
+.dropdown-menu {
+  float: right !important;
+  right: 0px;
+  left: auto;
+}
+
+nav {
+  padding: 3px;
+}
+
 .nav-item{
   font-size: 24px;
 }
