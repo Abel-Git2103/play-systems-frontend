@@ -1,7 +1,26 @@
 <app-navbar></app-navbar>
-<div class="d-flex chat">
-  <app-my-groups></app-my-groups>
-  <div class="messages">
-    <app-messages></app-messages>
+
+<div class="container">
+  <div class="row">
+    <!-- Columna de los grupos a los que perteneces -->
+    <div class="col-xxl-2 mygroups-nav border">
+      <div class="row">
+        <app-my-groups></app-my-groups>
+      </div>
+      <div class="row">
+        <app-my-groups></app-my-groups>
+      </div>
+      <div class="row">
+        <app-my-groups></app-my-groups>
+      </div>
+      <div class="row">
+        <app-my-groups></app-my-groups>
+      </div>
+    </div>
+
+    <!-- Columna del chat -->
+    <div class="col">
+      <app-messages></app-messages>
+    </div>
   </div>
 </div>

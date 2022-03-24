@@ -1,12 +1,38 @@
-.mensaje {
+.mensajes {
   max-width: 98rem;
   max-height: 48rem;
-  border-radius: 15px;
 
 }
 
 .enviar {
   display: flex;
   justify-content: right;
+
+}
+
+.contenedor-mensajes{
+  text-align: left;
+  padding: 10px;
+  height: 90%;
+  border-radius: 5px;
+
+}
+
+.caja-mensaje {
+  min-width: 78.8vw;
+}
+
+
+@media only screen and (max-width: 1366px) {
+
+  .mensajes {
+    max-width: 50rem;
+    max-height: 26rem;
+
+  }
+
+  .caja-mensaje {
+    min-width: 46vw;
+  }
 
 }
