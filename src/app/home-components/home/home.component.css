@@ -7,3 +7,10 @@
   scrollbar-width: thin;
   background-color: #d8e2e6;
 }
+
+.container{
+  margin: 0 0 0 0;
+  width: 100vw !important;
+  background-color: aqua;
+  height: 100vh;
+}

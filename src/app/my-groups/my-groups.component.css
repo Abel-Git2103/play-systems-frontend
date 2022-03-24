@@ -1,12 +1,24 @@
 .box {
-  width: max-content;
   overflow: scroll;
   overflow-x: hidden;
-  height: 85%;
+  margin-top: 25px;
   scrollbar-color: #344D90 rgba(235, 40, 40, 0);
   scrollbar-width: thin;
   background-color: #d8e2e6;
 
+}
+
+.group-card{
+  width: 200px;
+  height: 200px;
+}
+
+@media screen and (max-width: 600px) {
+  .group-card{
+    width: 100px;
+    height: 100px;
+    font-size: smaller;
+  }
 }
 
 .alinear {
