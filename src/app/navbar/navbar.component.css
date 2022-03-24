@@ -1,4 +1,16 @@
-.bar {
+.navbar-toggler {
+  background-color: #E7552C;
+}
+
+li a {
+  text-align: center;
+}
+
+li a:hover {
+  background-color: #E7552C;
+}
+
+/* .bar {
   background-color: #344D90;
 }
 .nav-link {
@@ -8,4 +20,4 @@
 }
 a{
   margin-top: 12px;
-}
+} */
