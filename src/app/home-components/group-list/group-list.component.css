@@ -1,9 +1,17 @@
-.group-description {
-  width: 100vw;
-}
 
 .group-card {
-  margin: 1% 1% 0 0;
   text-align: center;
+  background-color: #d8e2e6;
+  margin: 1% 1% 1% 1%;
+}
 
+.card-img-position{
+  display: block;
+  margin: auto;
+  margin-right: 10%;
+}
+
+.container{
+  margin: 0.5%;
+  background-color: aqua;
 }
