@@ -1,9 +1,15 @@
-.group-description {
-  width: 100vw;
+.group-card {
+  text-align: center;
+  background-color: #d8e2e6;
+  margin: 1% 1% 1% 1%;
 }
 
-.group-card {
-  margin: 1% 1% 0 0;
-  text-align: center;
+.card-img-position {
+  display: block;
+  margin: auto;
+  margin-right: 10%;
+}
 
+.container {
+  background-color: aqua;
 }

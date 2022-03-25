@@ -1,36 +1,22 @@
 <app-navbar></app-navbar>
-<!-- <app-my-groups></app-my-groups>
-<app-game-explorer></app-game-explorer>
-<app-group-list></app-group-list> -->
-
-<!-- <div class="container m-0 main"></div> -->
-
-<div class="container">
-  <div class="row">
-    <!-- Columna de los grupos a los que perteneces -->
-    <div class="col-xxl-2 mygroups-nav border">
-      <div class="row">
-        <app-my-groups></app-my-groups>
-      </div>
-    </div>
-
-    <!-- Columna del buscador de grupos y la lista de grupos -->
-    <div class="col-xxl-10 border">
-      <div class="row d-flex">
-        <app-game-explorer></app-game-explorer>
+<div class="contenedor">
+  <div class="container">
+    <div class="row">
+      <!-- Columna de los grupos a los que perteneces -->
+      <div class="col-sm-1 mygroups-nav">
+        <div class="row">
+          <app-my-groups></app-my-groups>
+        </div>
       </div>
 
-      <div class="row">
-        <app-group-list> </app-group-list>
-      </div>
-      <div class="row">
-        <app-group-list> </app-group-list>
-      </div>
-      <div class="row">
-        <app-group-list> </app-group-list>
-      </div>
-      <div class="row">
-        <app-group-list> </app-group-list>
+      <!-- Columna del buscador de grupos y la lista de grupos -->
+      <div class="col">
+        <div class="row">
+          <app-game-explorer></app-game-explorer>
+        </div>
+        <div class="row available-groups-nav">
+          <app-group-list> </app-group-list>
+        </div>
       </div>
     </div>
   </div>
