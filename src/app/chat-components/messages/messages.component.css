@@ -1,6 +1,5 @@
 .mensajes {
-  max-width: 98rem;
-  max-height: 48rem;
+  margin: 2%;
   border-radius: 15px;
   background-color: #daf3fd;
   padding: 1%;
@@ -62,14 +61,10 @@
   text-align: end;
 }
 
-
-
-
-@media only screen and (max-width: 1366px) {
+@media only screen and (min-width: 320px) {
 
   .mensajes {
-    max-width: 50rem;
-    max-height: 26rem;
+    margin: 2%;
     background-color: #daf3fd;
     padding: 1%;
     /* border: solid 1px rgb#344D90; */
@@ -81,6 +76,4 @@
   .caja-mensaje {
     min-width: 46vw;
   }
-
-
 }
