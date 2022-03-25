@@ -8,6 +8,7 @@
 .register {
   background-color: #e7552c;
 }
+
 .select-css {
   display: block;
   font-size: 16px;
@@ -32,12 +33,15 @@
   background-position: right 0.7em top 50%, 0 0;
   background-size: 0.65em auto, 100%;
 }
+
 .select-css::-ms-expand {
   display: none;
 }
+
 .select-css:hover {
   border-color: #888;
 }
+
 .select-css:focus {
   border-color: #aaa;
   box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
@@ -45,30 +49,7 @@
   color: #222;
   outline: none;
 }
+
 .select-css option {
   font-weight: normal;
-}
-
-@media (min-width: 600px) {
-  .container {
-    max-width: 600px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 992px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
-  }
 }
