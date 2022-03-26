@@ -1,13 +1,12 @@
-<div class="container" style="border: 3px solid black;">
+<app-navbar></app-navbar>
+<div class="container">
   <div class="container-row row">
-    <app-navbar></app-navbar>
     <!-- Columna de los grupos a los que perteneces -->
-    <div class="col-sm-1 mygroups-nav" style="border: 3px solid black;">
+    <div class="col-sm-1 mygroups-nav">
       <app-my-groups></app-my-groups>
     </div>
-
     <!-- Columna del buscador de grupos y la lista de grupos -->
-    <div class="col available-groups" style="border: 3px solid red;">
+    <div class="col available-groups">
       <app-game-explorer></app-game-explorer>
       <app-group-list> </app-group-list>
     </div>
