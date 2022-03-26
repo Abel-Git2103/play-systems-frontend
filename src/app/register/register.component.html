@@ -28,12 +28,12 @@
                         class="form-label alerta"
                         *ngIf="user_register.nombre == ''"
                         ><i class="bi bi-exclamation-circle-fill"></i>
-                        Nombre</label
+                        *Nombre</label
                       >
                       <label
                         class="form-label alerta2"
                         *ngIf="user_register.nombre != ''"
-                        ><i class="bi bi-check-circle-fill"></i> Nombre</label
+                        ><i class="bi bi-check-circle-fill"></i> *Nombre</label
                       >
                       <input
                         type="text"
@@ -42,7 +42,7 @@
                         [(ngModel)]="user_register.nombre"
                         id="nombre"
                         name="nombre"
-                        placeholder="*Nombre"
+                        placeholder="Nombre"
                       />
                     </div>
                   </div>
@@ -52,13 +52,13 @@
                         class="form-label alerta"
                         *ngIf="user_register.apellidos == ''"
                         ><i class="bi bi-exclamation-circle-fill"></i>
-                        Apellidos</label
+                        *Apellidos</label
                       >
                       <label
                         class="form-label alerta2"
                         *ngIf="user_register.apellidos != ''"
                         ><i class="bi bi-check-circle-fill"></i>
-                        Apellidos</label
+                        *Apellidos</label
                       >
                       <input
                         type="text"
@@ -67,13 +67,22 @@
                         [(ngModel)]="user_register.apellidos"
                         id="apellidos"
                         name="apellidos"
-                        placeholder="*Apellidos"
+                        placeholder="Apellidos"
                       />
                     </div>
                   </div>
                 </div>
                 <div class="form-outline mb-4">
-                  <label class="form-label alerta">*eMail</label>
+                  <label
+                    class="form-label alerta"
+                    *ngIf="user_register.email == ''"
+                    ><i class="bi bi-exclamation-circle-fill"></i> *eMail</label
+                  >
+                  <label
+                    class="form-label alerta2"
+                    *ngIf="user_register.email != ''"
+                    ><i class="bi bi-check-circle-fill"></i> *eMail</label
+                  >
                   <input
                     type="text"
                     class="form-control"
@@ -81,11 +90,22 @@
                     [(ngModel)]="user_register.email"
                     id="email"
                     name="email"
-                    placeholder="*Email"
+                    placeholder="Email"
                   />
                 </div>
                 <div class="form-outline mb-4">
-                  <label class="form-label alerta">*Nombre Usuario</label>
+                  <label
+                    class="form-label alerta"
+                    *ngIf="user_register.username == ''"
+                    ><i class="bi bi-exclamation-circle-fill"></i> *Nombre
+                    Usuario</label
+                  >
+                  <label
+                    class="form-label alerta2"
+                    *ngIf="user_register.username != ''"
+                    ><i class="bi bi-check-circle-fill"></i> *Nombre
+                    Usuario</label
+                  >
                   <input
                     type="text"
                     class="form-control"
@@ -93,11 +113,21 @@
                     [(ngModel)]="user_register.username"
                     id="username"
                     name="username"
-                    placeholder="*Username"
+                    placeholder="Username"
                   />
                 </div>
                 <div class="form-outline mb-4">
-                  <label class="form-label alerta">*Contraseña</label>
+                  <label
+                    class="form-label alerta"
+                    *ngIf="user_register.password == ''"
+                    ><i class="bi bi-exclamation-circle-fill"></i>
+                    *Contraseña</label
+                  >
+                  <label
+                    class="form-label alerta2"
+                    *ngIf="user_register.password != ''"
+                    ><i class="bi bi-check-circle-fill"></i> *Contraseña</label
+                  >
                   <input
                     type="password"
                     id="password"
@@ -106,7 +136,7 @@
                     [(ngModel)]="user_register.password"
                     id="password"
                     name="password"
-                    placeholder="*Contraseña"
+                    placeholder="Contraseña"
                   />
                 </div>
 
@@ -116,7 +146,7 @@
                     class="form-control"
                     id="repeat_password"
                     name="repeat_password"
-                    placeholder="*Repetir Contraseña"
+                    placeholder="Repetir Contraseña"
                   />
                   <label class="form-label alerta" *ngIf="repeat_password == ''"
                     >*Repetir Contraseña
