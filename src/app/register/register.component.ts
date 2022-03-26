@@ -13,12 +13,12 @@ export class RegisterComponent implements OnInit {
     apellidos: '',
     email: '',
     password: '',
-    foto_perfil: null,
-    fecha_creacion: null,
-    fecha_modificacion: null,
-    role: null,
-    usuario_steam: null,
-    grupos: null,
+    foto_perfil: '',
+    fecha_creacion: '',
+    fecha_modificacion: '',
+    role: '',
+    usuario_steam: '',
+    grupos: '',
   };
 
   isSuccessful = false;
