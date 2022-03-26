@@ -1,82 +1,16 @@
 <div class="container">
-  <div class="card group-card">
+  <div *ngFor="let group of available_groups"  class="card group-card">
     <div class="row no-gutters">
       <div class="col-sm-4 card-img-position">
         <img
           class="card-img"
-          src="https://i.blogs.es/591b5a/280518-darksouls-review/1366_2000.jpg"
+          src="{{group.juego.imagen}}"
           alt="Suresh Dasari Card"
         />
       </div>
       <div class="col group-description">
-        <h5 class="card-title">Nombre Grupo</h5>
-        <p class="card-text">Descrpicion del grupo y modo de juego.</p>
-        <a href="/chat" class="btn btn-primary">ENTRAR</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="card group-card">
-    <div class="row no-gutters">
-      <div class="col-sm-4 card-img-position">
-        <img
-          class="card-img"
-          src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_MarioKart8Deluxe_image1600w.jpg"
-          alt="Suresh Dasari Card"
-        />
-      </div>
-      <div class="col group-description">
-        <h5 class="card-title">Nombre Grupo</h5>
-        <p class="card-text">Descrpicion del grupo y modo de juego.</p>
-        <a href="/chat" class="btn btn-primary">ENTRAR</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="card group-card">
-    <div class="row no-gutters">
-      <div class="col-sm-4 card-img-position">
-        <img
-          class="card-img"
-          src="https://e.rpp-noticias.io/normal/2019/04/19/203320_780070.jpg"
-          alt="Suresh Dasari Card"
-        />
-      </div>
-      <div class="col group-description">
-        <h5 class="card-title">Nombre Grupo</h5>
-        <p class="card-text">Descrpicion del grupo y modo de juego.</p>
-        <a href="/chat" class="btn btn-primary">ENTRAR</a>
-      </div>
-    </div>
-  </div>
-  <div class="card group-card">
-    <div class="row no-gutters">
-      <div class="col-sm-4 card-img-position">
-        <img
-          class="card-img"
-          src="https://e.rpp-noticias.io/normal/2019/04/19/203320_780070.jpg"
-          alt="Suresh Dasari Card"
-        />
-      </div>
-      <div class="col group-description">
-        <h5 class="card-title">Nombre Grupo</h5>
-        <p class="card-text">Descrpicion del grupo y modo de juego.</p>
-        <a href="/chat" class="btn btn-primary">ENTRAR</a>
-      </div>
-    </div>
-  </div>
-  <div class="card group-card">
-    <div class="row no-gutters">
-      <div class="col-sm-4 card-img-position">
-        <img
-          class="card-img"
-          src="https://e.rpp-noticias.io/normal/2019/04/19/203320_780070.jpg"
-          alt="Suresh Dasari Card"
-        />
-      </div>
-      <div class="col group-description">
-        <h5 class="card-title">Nombre Grupo</h5>
-        <p class="card-text">Descrpicion del grupo y modo de juego.</p>
+        <h5 class="card-title">{{group.nombre_grupo}}</h5>
+        <p class="card-text">{{group.descripcion}}</p>
         <a href="/chat" class="btn btn-primary">ENTRAR</a>
       </div>
     </div>
