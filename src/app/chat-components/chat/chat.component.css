@@ -1,12 +1,14 @@
 .mygroups-nav {
   width: max-content;
+  height: 100vh;
   overflow: scroll;
   overflow-x: hidden;
-  height: 830px;
   scrollbar-color: #344d90 rgba(235, 40, 40, 0);
   scrollbar-width: thin;
   background-color: #d8e2e6;
 }
+
+
 
 .chat-nav {
   width: max-content;
