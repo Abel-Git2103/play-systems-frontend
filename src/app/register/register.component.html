@@ -34,6 +34,14 @@
                         name="nombre"
                         placeholder="Nombre"
                       />
+<<<<<<< Updated upstream
+=======
+                      <label
+                        class="form-label alerta"
+                        *ngIf="user_register.nombre == ''"
+                        >*Nombre
+                      </label>
+>>>>>>> Stashed changes
                     </div>
                   </div>
                   <div class="col-md-6 mb-4">
@@ -48,6 +56,14 @@
                         name="apellidos"
                         placeholder="Apellidos"
                       />
+<<<<<<< Updated upstream
+=======
+                      <label
+                        class="form-label alerta"
+                        *ngIf="user_register.apellidos == ''"
+                        >*Apellidos</label
+                      >
+>>>>>>> Stashed changes
                     </div>
                   </div>
                 </div>
@@ -60,8 +76,18 @@
                     [(ngModel)]="user_register.email"
                     id="email"
                     name="email"
+<<<<<<< Updated upstream
                     placeholder="email"
                   />
+=======
+                    placeholder="eMail"
+                  />
+                  <label
+                    class="form-label alerta"
+                    *ngIf="user_register.email == ''"
+                    >*eMail</label
+                  >
+>>>>>>> Stashed changes
                 </div>
                 <div class="form-outline mb-4">
                   <label class="form-label">*Nombre Usuario</label>
@@ -72,8 +98,18 @@
                     [(ngModel)]="user_register.username"
                     id="username"
                     name="username"
+<<<<<<< Updated upstream
                     placeholder="username"
                   />
+=======
+                    placeholder="Nombre Usuario"
+                  />
+                  <label
+                    class="form-label alerta"
+                    *ngIf="user_register.username == ''"
+                    >*Nombre Usuario</label
+                  >
+>>>>>>> Stashed changes
                 </div>
                 <div class="form-outline mb-4">
                   <label class="form-label">*Contraseña</label>
@@ -85,9 +121,36 @@
                     [(ngModel)]="user_register.password"
                     id="password"
                     name="password"
+<<<<<<< Updated upstream
                     placeholder="contraseña"
                   />
+=======
+                    placeholder="Contraseña"
+                  />
+                  <label
+                    class="form-label alerta"
+                    *ngIf="user_register.password == ''"
+                    >*Contraseña</label
+                  >
+>>>>>>> Stashed changes
                 </div>
+
+                <div class="form-outline mb-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="repeat_password"
+                    name="repeat_password"
+                    placeholder="Repetir Contraseña"
+                  />
+                  <label class="form-label alerta" *ngIf="repeat_password == ''"
+                    >*Repetir Contraseña
+                  </label>
+                  <!-- <label class="form-label alerta"
+                    >Has introducido una contraseña diferente</label
+                  > -->
+                </div>
+
                 <div class="d-flex justify-content-end pt-3">
                   <button
                     type="button"

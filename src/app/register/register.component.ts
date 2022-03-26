@@ -23,6 +23,7 @@ export class RegisterComponent implements OnInit {
   };
 
   isSuccessful = false;
+  repeat_password = '';
 
   constructor(private loginService: LoginService) {}
 
@@ -43,16 +44,20 @@ export class RegisterComponent implements OnInit {
       usuario_steam: this.user_register.usuario_steam,
     };
 
-    this.loginService.add(data).subscribe(
-      (response) => {
-        console.log(response);
-        this.isSuccessful = true;
-        alert('Usuario creado correctamente');
-      },
-      (error) => {
-        console.log(error);
-        alert('No se ha podido crear el usuario');
-      }
-    );
+    if (this.user_register.apellidos == '') {
+      alert('Campo apellidos vacio');
+    } else {
+      this.loginService.add(data).subscribe(
+        (response) => {
+          console.log(response);
+          this.isSuccessful = true;
+          alert('Usuario creado correctamente');
+        },
+        (error) => {
+          console.log(error);
+          alert('No se ha podido crear el usuario');
+        }
+      );
+    }
   }
 }

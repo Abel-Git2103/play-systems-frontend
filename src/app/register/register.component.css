@@ -1,25 +1,37 @@
-.contenedor{
+.contenedor {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url('\src\assets\img\fondologin.jpg');
   overflow-y: scroll;
 }
-.logo{
+
+.logo {
   padding-top: 155px;
   background-color: black;
 }
+
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
   font-size: 1rem;
   line-height: 2.15;
   padding-left: .75em;
   padding-right: .75em;
 }
+
 .card-registration .select-arrow {
   top: 13px;
 }
-.register{
+
+.register {
   background-color: #E7552C;
   border-color: #E7552C;
   color: white;
+}
+
+.alerta {
+  color: red;
+}
+
+.alerta2 {
+  color: rgb(61, 167, 48);
 }
