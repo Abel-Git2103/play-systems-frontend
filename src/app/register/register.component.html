@@ -141,19 +141,27 @@
                 </div>
 
                 <div class="form-outline mb-4">
+                  <label class="form-label alerta" *ngIf="repetir == ''"
+                    ><i class="bi bi-exclamation-circle-fill"></i>
+                    *Repetir Contraseña
+                  </label>
+                  <label class="form-label alerta2" *ngIf="repetir != ''"
+                    ><i class="bi bi-check-circle-fill"></i> *Repetir Contraseña
+                  </label>
+                  <label
+                    class="form-label alerta"
+                    *ngIf="repetir != user_register.password"
+                  >
+                    &nbsp;&nbsp;&nbsp;La contraseña es diferente
+                  </label>
                   <input
-                    type="text"
+                    type="password"
                     class="form-control"
                     id="repeat_password"
                     name="repeat_password"
                     placeholder="Repetir Contraseña"
+                    [(ngModel)]="repetir"
                   />
-                  <label class="form-label alerta" *ngIf="repeat_password == ''"
-                    >*Repetir Contraseña
-                  </label>
-                  <!-- <label class="form-label alerta"
-                    >Has introducido una contraseña diferente</label
-                  > -->
                 </div>
 
                 <div class="d-flex justify-content-end pt-3">
@@ -165,10 +173,33 @@
                     Cancelar
                   </button>
                   <button
+                    *ngIf="
+                      user_register.nombre != '' &&
+                      user_register.apellidos != '' &&
+                      user_register.email != '' &&
+                      user_register.username != '' &&
+                      user_register.password != '' &&
+                      repetir == user_register.password
+                    "
                     type="submit"
                     class="register btn btn-warning btn ms-2"
                     routerLink="/login"
                     (click)="newUser()"
+                  >
+                    Registrarse
+                  </button>
+
+                  <button
+                    *ngIf="
+                      user_register.nombre == '' ||
+                      user_register.apellidos == '' ||
+                      user_register.email == '' ||
+                      user_register.username == '' ||
+                      user_register.password == '' ||
+                      repetir != user_register.password
+                    "
+                    type="submit"
+                    class="register btn btn-warning btn ms-2"
                   >
                     Registrarse
                   </button>
