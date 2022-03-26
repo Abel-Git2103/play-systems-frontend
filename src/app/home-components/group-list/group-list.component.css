@@ -11,5 +11,10 @@
 }
 
 .container {
-  background-color: aqua;
+  width: 100vw;
+}
+
+.group-description {
+  margin: 5%;
+  align-items: center;
 }
