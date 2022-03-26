@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from 'src/app/service/auth/login.service';
 
 @Component({
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   submitted = false;
 
-  constructor(private loginService: LoginService) {}
+  constructor(private loginService: LoginService, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -33,6 +34,7 @@ export class LoginComponent implements OnInit {
         this.token = response;
         this.submitted = true;
         console.log(response);
+        this.router.navigate(['/home']);
         window.sessionStorage.setItem("auth-token", this.token.token);
         window.sessionStorage.setItem("auth-username", this.login.username);
       },
