@@ -18,7 +18,7 @@ export class RegisterComponent implements OnInit {
     fecha_modificacion: '',
     role: '',
     usuario_steam: '',
-    grupos: '',
+    grupos: null,
   };
 
   isSuccessful = false;
@@ -28,7 +28,6 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   newUser(): void {
-    this.isSuccessful = false;
     const data = {
       username: this.user_register.username,
       nombre: this.user_register.nombre,

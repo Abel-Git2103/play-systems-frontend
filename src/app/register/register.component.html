@@ -28,6 +28,7 @@
                       <input
                         type="text"
                         class="form-control"
+                        required
                         [(ngModel)]="user_register.nombre"
                         id="nombre"
                         name="nombre"
@@ -40,6 +41,7 @@
                       <input
                         type="text"
                         class="form-control"
+                        required
                         [(ngModel)]="user_register.apellidos"
                         id="apellidos"
                         name="apellidos"
@@ -48,10 +50,11 @@
                     </div>
                   </div>
                 </div>
-                <div class="form-outline mb-4 form-group">
+                <div class="form-outline mb-4">
                   <input
                     type="text"
                     class="form-control"
+                    required
                     [(ngModel)]="user_register.email"
                     id="email"
                     name="email"
@@ -62,6 +65,7 @@
                   <input
                     type="text"
                     class="form-control"
+                    required
                     [(ngModel)]="user_register.username"
                     id="username"
                     name="username"
@@ -74,6 +78,7 @@
                     type="password"
                     id="password"
                     class="form-control"
+                    required
                     [(ngModel)]="user_register.password"
                     id="password"
                     name="password"
