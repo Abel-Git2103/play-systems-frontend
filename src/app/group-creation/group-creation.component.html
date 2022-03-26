@@ -2,49 +2,43 @@
   <div class="contenedor">
     <app-navbar></app-navbar>
     <div class="container">
-      <div *ngIf="!submitted">
-        <div class="caja card card-registration my-4">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="card-body p-md-5 text-black">
-                <h3 class="mb-3">
-                  <b>CREA TU GRUPO</b>
-                </h3>
-                <p>*CAMPO OBLIGATORIO</p>
-                <div class="row">
-                  <div class="col-sm-12 mb-4">
-                    <div class="form-outline">
-                      <label class="form-label">*Nombre del grupo</label>
-                      <input type="text" class="form-control" placeholder="Nombre del grupo" maxlength="20" required
-                        [(ngModel)]="grupo.nombre_grupo" />
-                    </div>
+      <div class="caja card card-registration my-4">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card-body p-md-5 text-black">
+              <h3 class="mb-3">
+                <b>CREA TU GRUPO</b>
+              </h3>
+              <p>*CAMPO OBLIGATORIO</p>
+              <div class="row">
+                <div class="col-sm-12 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label">*Nombre del grupo</label>
+                    <input type="text" class="form-control" placeholder="Nombre del grupo" maxlength="20" required
+                      [(ngModel)]="grupo.nombre_grupo" />
                   </div>
                 </div>
-                <div class="form-outline mb-4">
-                  <label class="form-label">*Descripción</label>
-                  <textarea class="descripcion form-control" placeholder="Describe el objetivo del grupo" required
-                    [(ngModel)]="grupo.descripcion"></textarea>
-                </div>
-                <div class="form-outline mb-4">
-                  <label class="form-label">*Juego</label>
-                  <select class="select-css form-control" required [(ngModel)]="grupo.juego">
-                    <option>Selecciona una opción...</option>
-                    <option>Valorant</option>
-                    <option>Mario Kart Deluxe 8</option>
-                    <option>Dark Souls</option>
-                    <option>League of Legends</option>
-                    <option>Sekiro</option>
-                  </select>
-                </div>
-                <div class="d-flex justify-content-end pt-3">
-                  <button type="button" class="btn btn-light btn" routerLink="/login">
-                    Cancelar
-                  </button>
-                  <button type="button" (click)="saveGroup()" class="register border-0 btn btn-primary btn ms-2"
-                    routerLink="/chat">
-                    Crear grupo
-                  </button>
-                </div>
+              </div>
+              <div class="form-outline mb-4">
+                <label class="form-label">*Descripción</label>
+                <textarea class="descripcion form-control" placeholder="Describe el objetivo del grupo" required
+                  [(ngModel)]="grupo.descripcion"></textarea>
+              </div>
+              <div class="form-outline mb-4">
+                <label class="form-label">*Juego</label>
+                <select class="select-css form-control" required [(ngModel)]="juego">
+                  <option>Selecciona un juego...</option>
+                  <option *ngFor="let juego of juegos">{{juego.nombre}}</option>
+                </select>
+              </div>
+              <div class="d-flex justify-content-end pt-3">
+                <button type="button" class="btn btn-light btn" routerLink="/login">
+                  Cancelar
+                </button>
+                <button type="button" (click)="saveGroup()" class="register border-0 btn btn-primary btn ms-2"
+                  routerLink="/chat">
+                  Crear grupo
+                </button>
               </div>
             </div>
           </div>
