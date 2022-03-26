@@ -26,7 +26,7 @@
               </div>
               <div class="form-outline mb-4">
                 <label class="form-label">*Juego</label>
-                <select class="select-css form-control" required [(ngModel)]="juego">
+                <select class="select-css form-control" required [(ngModel)]="grupo.juego">
                   <option>Selecciona un juego...</option>
                   <option *ngFor="let juego of juegos">{{juego.nombre}}</option>
                 </select>

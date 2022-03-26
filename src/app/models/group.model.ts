@@ -1,5 +1,5 @@
 export class Group {
+  juego?: any;
   nombre_grupo?: string;
-  juego?: object;
   descripcion?: string;
 }

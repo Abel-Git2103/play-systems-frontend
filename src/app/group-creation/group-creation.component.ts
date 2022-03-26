@@ -12,7 +12,7 @@ import { JuegoService } from '../service/juego.service';
 })
 export class GroupCreationComponent implements OnInit {
 
-  juego: Juego = {};
+  juego!: new () => Juego;
   juegos: any = null;
   grupo: Group = {};
 
@@ -21,6 +21,8 @@ export class GroupCreationComponent implements OnInit {
   constructor(private groupService: GroupService, private router: Router, private juegoService: JuegoService) {}
 
   ngOnInit(): void {
+
+    this.juego = this.grupo.juego;
     this.juegoService
     .retornar()
     .subscribe((result) => (this.juegos = result));
@@ -30,7 +32,7 @@ export class GroupCreationComponent implements OnInit {
     const data = {
       nombre_grupo: this.grupo.nombre_grupo,
       descripcion: this.grupo.descripcion,
-      juego: this.grupo.juego,
+      juego: this.juego,
     };
 
     this.groupService.add(data).subscribe(
