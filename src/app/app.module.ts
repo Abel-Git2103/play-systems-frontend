@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login-components/login/login.component';
@@ -15,6 +14,8 @@ import { ChatComponent } from './chat-components/chat/chat.component';
 import { GroupCreationComponent } from './group-creation/group-creation.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,13 @@ import { FormsModule } from '@angular/forms';
     GroupCreationComponent,
     ProfileComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    CommonModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
