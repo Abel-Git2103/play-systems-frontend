@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { GroupListComponent } from './group-list.component';
 
 describe('GroupListComponent', () => {

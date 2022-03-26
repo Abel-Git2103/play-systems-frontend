@@ -9,20 +9,21 @@ import { LoginService } from '../service/auth/login.service';
 })
 export class RegisterComponent implements OnInit {
   user_register: User = {
-    apellidos: null,
-    email: null,
+    apellidos: '',
+    email: '',
     fecha_creacion: '',
     fecha_modificacion: '',
     foto_perfil: '',
-    grupos: '1',
-    nombre: null,
-    password: null,
+    grupos: null,
+    nombre: '',
+    password: '',
     role: 'ROLE_USER',
-    username: null,
+    username: '',
     usuario_steam: '',
   };
 
   isSuccessful = false;
+  repeat_password = '';
 
   constructor(private loginService: LoginService) {}
 
@@ -43,16 +44,20 @@ export class RegisterComponent implements OnInit {
       usuario_steam: this.user_register.usuario_steam,
     };
 
-    this.loginService.add(data).subscribe(
-      (response) => {
-        console.log(response);
-        this.isSuccessful = true;
-        alert('Usuario creado correctamente');
-      },
-      (error) => {
-        console.log(error);
-        alert('No se ha podido crear el usuario');
-      }
-    );
+    if (this.user_register.apellidos == '') {
+      alert('Campo apellidos vacio');
+    } else {
+      this.loginService.add(data).subscribe(
+        (response) => {
+          console.log(response);
+          this.isSuccessful = true;
+          alert('Usuario creado correctamente');
+        },
+        (error) => {
+          console.log(error);
+          alert('No se ha podido crear el usuario');
+        }
+      );
+    }
   }
 }

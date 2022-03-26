@@ -21,10 +21,10 @@
                   PLAY-SYSTEMS REGISTRATION FORM
                 </h3>
                 <p>*CAMPO OBLIGATORIO</p>
-
                 <div class="row">
                   <div class="col-md-6 mb-4">
                     <div class="form-outline">
+                      <label class="form-label">*Nombre</label>
                       <input
                         type="text"
                         class="form-control"
@@ -32,12 +32,21 @@
                         [(ngModel)]="user_register.nombre"
                         id="nombre"
                         name="nombre"
+                        placeholder="Nombre"
                       />
-                      <label class="form-label">*Nombre</label>
+<<<<<<< Updated upstream
+=======
+                      <label
+                        class="form-label alerta"
+                        *ngIf="user_register.nombre == ''"
+                        >*Nombre
+                      </label>
+>>>>>>> Stashed changes
                     </div>
                   </div>
                   <div class="col-md-6 mb-4">
                     <div class="form-outline">
+                      <label class="form-label">*Apellidos</label>
                       <input
                         type="text"
                         class="form-control"
@@ -45,12 +54,21 @@
                         [(ngModel)]="user_register.apellidos"
                         id="apellidos"
                         name="apellidos"
+                        placeholder="Apellidos"
                       />
-                      <label class="form-label">*Apellidos</label>
+<<<<<<< Updated upstream
+=======
+                      <label
+                        class="form-label alerta"
+                        *ngIf="user_register.apellidos == ''"
+                        >*Apellidos</label
+                      >
+>>>>>>> Stashed changes
                     </div>
                   </div>
                 </div>
                 <div class="form-outline mb-4">
+                  <label class="form-label">*eMail</label>
                   <input
                     type="text"
                     class="form-control"
@@ -58,10 +76,21 @@
                     [(ngModel)]="user_register.email"
                     id="email"
                     name="email"
+<<<<<<< Updated upstream
+                    placeholder="email"
                   />
-                  <label class="form-label">*eMail</label>
+=======
+                    placeholder="eMail"
+                  />
+                  <label
+                    class="form-label alerta"
+                    *ngIf="user_register.email == ''"
+                    >*eMail</label
+                  >
+>>>>>>> Stashed changes
                 </div>
                 <div class="form-outline mb-4">
+                  <label class="form-label">*Nombre Usuario</label>
                   <input
                     type="text"
                     class="form-control"
@@ -69,11 +98,21 @@
                     [(ngModel)]="user_register.username"
                     id="username"
                     name="username"
+<<<<<<< Updated upstream
+                    placeholder="username"
                   />
-                  <label class="form-label">*Nombre Usuario</label>
+=======
+                    placeholder="Nombre Usuario"
+                  />
+                  <label
+                    class="form-label alerta"
+                    *ngIf="user_register.username == ''"
+                    >*Nombre Usuario</label
+                  >
+>>>>>>> Stashed changes
                 </div>
-
                 <div class="form-outline mb-4">
+                  <label class="form-label">*Contraseña</label>
                   <input
                     type="password"
                     id="password"
@@ -82,9 +121,36 @@
                     [(ngModel)]="user_register.password"
                     id="password"
                     name="password"
+<<<<<<< Updated upstream
+                    placeholder="contraseña"
                   />
-                  <label class="form-label">*Contraseña</label>
+=======
+                    placeholder="Contraseña"
+                  />
+                  <label
+                    class="form-label alerta"
+                    *ngIf="user_register.password == ''"
+                    >*Contraseña</label
+                  >
+>>>>>>> Stashed changes
                 </div>
+
+                <div class="form-outline mb-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="repeat_password"
+                    name="repeat_password"
+                    placeholder="Repetir Contraseña"
+                  />
+                  <label class="form-label alerta" *ngIf="repeat_password == ''"
+                    >*Repetir Contraseña
+                  </label>
+                  <!-- <label class="form-label alerta"
+                    >Has introducido una contraseña diferente</label
+                  > -->
+                </div>
+
                 <div class="d-flex justify-content-end pt-3">
                   <button
                     type="button"

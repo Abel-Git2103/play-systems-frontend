@@ -1,13 +1,13 @@
 export class User {
-  apellidos: any;
-  email: any;
-  fecha_creacion?: string;
-  fecha_modificacion?: string;
-  foto_perfil?: string;
-  grupos?: string;
-  nombre: any;
-  password: any;
-  role?: string;
-  username: any;
+  apellidos?: string;
+  email?: string;
+  fecha_creacion?: any;
+  fecha_modificacion?: any;
+  foto_perfil?: any;
+  grupos?: any;
+  nombre?: string;
+  password?: any;
+  role?: any;
+  username?: string;
   usuario_steam?: string;
 }
