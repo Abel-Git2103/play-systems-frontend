@@ -21,10 +21,10 @@
                   PLAY-SYSTEMS REGISTRATION FORM
                 </h3>
                 <p>*CAMPO OBLIGATORIO</p>
-
                 <div class="row">
                   <div class="col-md-6 mb-4">
                     <div class="form-outline">
+                      <label class="form-label">*Nombre</label>
                       <input
                         type="text"
                         class="form-control"
@@ -32,12 +32,13 @@
                         [(ngModel)]="user_register.nombre"
                         id="nombre"
                         name="nombre"
+                        placeholder="Nombre"
                       />
-                      <label class="form-label">*Nombre</label>
                     </div>
                   </div>
                   <div class="col-md-6 mb-4">
                     <div class="form-outline">
+                      <label class="form-label">*Apellidos</label>
                       <input
                         type="text"
                         class="form-control"
@@ -45,12 +46,13 @@
                         [(ngModel)]="user_register.apellidos"
                         id="apellidos"
                         name="apellidos"
+                        placeholder="Apellidos"
                       />
-                      <label class="form-label">*Apellidos</label>
                     </div>
                   </div>
                 </div>
                 <div class="form-outline mb-4">
+                  <label class="form-label">*eMail</label>
                   <input
                     type="text"
                     class="form-control"
@@ -58,10 +60,11 @@
                     [(ngModel)]="user_register.email"
                     id="email"
                     name="email"
+                    placeholder="email"
                   />
-                  <label class="form-label">*eMail</label>
                 </div>
                 <div class="form-outline mb-4">
+                  <label class="form-label">*Nombre Usuario</label>
                   <input
                     type="text"
                     class="form-control"
@@ -69,11 +72,11 @@
                     [(ngModel)]="user_register.username"
                     id="username"
                     name="username"
+                    placeholder="username"
                   />
-                  <label class="form-label">*Nombre Usuario</label>
                 </div>
-
                 <div class="form-outline mb-4">
+                  <label class="form-label">*Contraseña</label>
                   <input
                     type="password"
                     id="password"
@@ -82,8 +85,8 @@
                     [(ngModel)]="user_register.password"
                     id="password"
                     name="password"
+                    placeholder="contraseña"
                   />
-                  <label class="form-label">*Contraseña</label>
                 </div>
                 <div class="d-flex justify-content-end pt-3">
                   <button
