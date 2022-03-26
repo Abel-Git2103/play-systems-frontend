@@ -3,6 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url('\src\assets\img\fondologin.jpg');
+  overflow-y: scroll;
 }
 .logo{
   padding-top: 155px;
