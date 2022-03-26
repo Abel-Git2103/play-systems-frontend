@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GroupService } from '../service/group.service';
 
 @Component({
   selector: 'app-group-creation',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GroupCreationComponent implements OnInit {
 
-  constructor() { }
+  groups: any = null;
 
-  ngOnInit(): void {
+  constructor(private groupService: GroupService) {}
+
+  ngOnInit() {
+    this.groupService
+      .retornar()
+      .subscribe((result) => (this.groups = result));
   }
-
 }
