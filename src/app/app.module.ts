@@ -16,6 +16,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { authInterceptorProviders } from './helpers/auth.interceptor';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +41,7 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

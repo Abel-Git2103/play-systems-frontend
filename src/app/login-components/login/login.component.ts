@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/service/auth/login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  token: any = 'token inicial';
 
-  ngOnInit(): void {
+  login: any = {
+    username: '',
+    password: '',
+  };
+
+  submitted = false;
+
+  constructor(private loginService: LoginService) {}
+
+  ngOnInit(): void {}
+
+  logUser(): void {
+    const data = {
+      username: this.login.username,
+      password: this.login.password,
+    };
+
+    this.loginService.signUp(data)
+    .subscribe(
+      response => {
+        this.token = response;
+        this.submitted = true;
+        console.log(response);
+        window.sessionStorage.setItem("auth-token", this.token.token);
+        window.sessionStorage.setItem("auth-username", this.login.username);
+      },
+      error => {
+        console.log(error);
+        alert("Usuario o contraseña incorrecta")
+      });
   }
-
 }
