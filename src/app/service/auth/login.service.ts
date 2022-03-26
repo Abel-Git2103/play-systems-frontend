@@ -13,7 +13,6 @@ export interface User {
   providedIn: 'root',
 })
 export class LoginService {
-
   private user: any;
   private user$: Subject<any>;
 
