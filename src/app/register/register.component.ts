@@ -9,16 +9,16 @@ import { LoginService } from '../service/auth/login.service';
 })
 export class RegisterComponent implements OnInit {
   user_register: User = {
-    apellidos: null,
-    email: null,
+    apellidos: '',
+    email: '',
     fecha_creacion: '',
     fecha_modificacion: '',
     foto_perfil: '',
-    grupos: '1',
-    nombre: null,
-    password: null,
+    grupos: null,
+    nombre: '',
+    password: '',
     role: 'ROLE_USER',
-    username: null,
+    username: '',
     usuario_steam: '',
   };
 
