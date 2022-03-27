@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../service/auth/user.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  username: any;
+  submitted = false;
+
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+    this.username=window.sessionStorage.getItem("auth-username");
+    this.userService.getById(this.username).subscribe(
+      (response) => {
+        console.log(response);
+        this.submitted = true;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
 }

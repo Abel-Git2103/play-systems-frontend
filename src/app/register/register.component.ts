@@ -32,7 +32,7 @@ export class RegisterComponent implements OnInit {
   newUser(): void {
     const data = {
       apellidos: this.user_register.apellidos,
-      email: this.user_register.password,
+      email: this.user_register.email,
       fecha_creacion: this.user_register.fecha_creacion,
       fecha_modificacion: this.user_register.fecha_modificacion,
       foto_perfil: this.user_register.foto_perfil,
@@ -44,10 +44,14 @@ export class RegisterComponent implements OnInit {
       usuario_steam: this.user_register.usuario_steam,
     };
 
-    this.loginService.add(data).subscribe({
-      next: (v) => console.log(v),
-      error: (e) => console.error(e),
-      complete: (isSuccessful = true) => console.info('complete'),
-    });
+    this.loginService.add(data).subscribe(
+      (response) => {
+        console.log(response);
+        this.isSuccessful = true;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 }

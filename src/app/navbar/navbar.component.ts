@@ -6,9 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
+
+usuario: any;
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.usuario=window.sessionStorage.getItem("auth-username");
+  }
 
   signOut(): void {
     window.sessionStorage.clear();
