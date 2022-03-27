@@ -25,7 +25,6 @@ export class ProfileComponent implements OnInit {
     const data = {
       apellidos: this.usuario.apellidos,
       email: this.usuario.email,
-
       nombre: this.usuario.nombre,
     };
 
