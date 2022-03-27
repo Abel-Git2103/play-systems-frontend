@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <body>
-  <div class="container-xl px-4 mt-4">
+  <div class="container-xl px-4 mt-4 submit-form">
     <!-- Account page navigation-->
     <div class="row">
       <div class="col-xl-4">
@@ -30,20 +30,21 @@
                   class="form-control"
                   id="inputUsername"
                   type="text"
-                  value="{{ this.username }}"
+                  name="username"
+                  value="{{ username }}"
                   disabled
                 />
               </div>
               <div class="mb-3">
-                <label class="form-label" for="inputFirstName"
-                  >Nombre</label
-                >
+                <label class="form-label" for="inputFirstName">Nombre</label>
                 <input
                   class="form-control"
                   id="inputFirstName"
                   type="text"
-                  value={{this.usuario.nombre}}
-                  required [(ngModel)]="usuario.nombre"
+                  name="nombre"
+                  value="{{ usuario.nombre }}"
+                  required
+                  [(ngModel)]="usuario.nombre"
                 />
               </div>
               <div class="mb-3">
@@ -52,8 +53,10 @@
                   class="form-control"
                   id="inputLastName"
                   type="text"
-                  value={{this.usuario.apellidos}}
-                  required [(ngModel)]="usuario.apellidos"
+                  name="apellidos"
+                  value="{{ usuario.apellidos }}"
+                  required
+                  [(ngModel)]="usuario.apellidos"
                 />
               </div>
               <!-- Form Group (email address)-->
@@ -64,13 +67,21 @@
                 <input
                   class="form-control"
                   id="inputEmailAddress"
-                  type="email"
-                  value={{this.usuario.email}}
-                  required [(ngModel)]="usuario.email"
+                  type="text"
+                  name="email"
+                  value="{{ usuario.email }}"
+                  required
+                  [(ngModel)]="usuario.email"
                 />
               </div>
               <!-- Save changes button-->
-              <button class="btn btn-primary button button" type="button" (click)="updateUser(usuario.nombre, usuario.apellidos, usuario.email)">
+              <button
+                class="btn btn-primary button button"
+                type="button"
+                (click)="
+                  updateUser(usuario.nombre, usuario.apellidos, usuario.email)
+                "
+              >
                 Guardar cambios
               </button>
             </form>

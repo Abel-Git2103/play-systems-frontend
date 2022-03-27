@@ -8,11 +8,7 @@ import { UserService } from '../service/auth/user.service';
 })
 export class ProfileComponent implements OnInit {
   username: any;
-  usuario: any = {
-    nombre: '',
-    apellidos: '',
-    email: '',
-  };
+  usuario: any = '';
 
   submitted = false;
 
@@ -29,14 +25,12 @@ export class ProfileComponent implements OnInit {
     const data = {
       apellidos: this.usuario.apellidos,
       email: this.usuario.email,
+
       nombre: this.usuario.nombre,
     };
 
     this.userService.update(this.usuario.username, data).subscribe(
       (response) => {
-        this.usuario.nombre = nombre;
-        this.usuario.apellidos = apellidos;
-        this.usuario.email = email;
         console.log(response);
         this.submitted = true;
       },
