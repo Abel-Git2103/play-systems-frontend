@@ -9,9 +9,9 @@ import { UserService } from '../service/auth/user.service';
 export class ProfileComponent implements OnInit {
   username: any;
   usuario: any = {
-    nombre:'',
+    nombre: '',
     apellidos: '',
-    email: ''
+    email: '',
   };
 
   submitted = false;
@@ -20,17 +20,12 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.username = window.sessionStorage.getItem('auth-username');
-    this.userService.getById(this.username).subscribe(result=>this.usuario=result)
+    this.userService
+      .getById(this.username)
+      .subscribe((result) => (this.usuario = result));
   }
 
   updateUser(nombre: string, apellidos: string, email: string): void {
-
-    usuario: any = {
-      nombre:'',
-      apellidos: '',
-      email: ''
-    };
-
     const data = {
       apellidos: this.usuario.apellidos,
       email: this.usuario.email,
