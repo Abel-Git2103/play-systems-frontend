@@ -18,3 +18,8 @@
   margin: 5%;
   align-items: center;
 }
+
+.button {
+  background-color: #e7552c;
+  border-color: #e7552c;
+}
