@@ -21,7 +21,7 @@ export class GroupListComponent implements OnInit {
       .retornar()
       .subscribe((result) => (this.available_groups = result));
   }
-  handleSearch(value: string) {
+  handleSearch(value: any) {
     console.log(value);
     this.filtro_valor = value;
   }

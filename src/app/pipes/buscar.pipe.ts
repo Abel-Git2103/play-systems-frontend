@@ -8,7 +8,7 @@ export class BuscarPipe implements PipeTransform {
     if (!texto) return lista;
 
     return lista.filter((group) =>
-      group.nombre_grupo.toUpperCase().includes(texto.toUpperCase())
+      group.juego.nombre.toUpperCase().includes(texto.toUpperCase())
     );
   }
 }
