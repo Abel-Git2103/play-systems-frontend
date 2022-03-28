@@ -26,9 +26,9 @@
               </div>
               <div class="form-outline mb-4">
                 <label class="form-label">*Juego</label>
-                <select name="miselect" class="select-css form-control" required [(ngModel)]="seleccionado">
+                <select name="miselect" class="select-css form-control" required [(ngModel)]="juego_seleccionado">
                   <option>Selecciona un juego...</option>
-                  <option [value]="juego.nombre" *ngFor="let juego of juegos">{{juego.nombre}}</option>
+                  <option [value]="juego.id_juego" *ngFor="let juego of juegos">{{juego.nombre}}</option>
                 </select>
               </div>
               <div class="d-flex justify-content-end pt-3">

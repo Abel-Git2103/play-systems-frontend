@@ -13,7 +13,8 @@ import { JuegoService } from '../service/juego.service';
 export class GroupCreationComponent implements OnInit {
 
   juegos: any = null;
-  seleccionado: string[]=[this.juegos];
+  juego_seleccionado: any;
+  posicion_juego_array: any;
   grupo: Group = {};
 
   submitted = false;
@@ -27,11 +28,15 @@ export class GroupCreationComponent implements OnInit {
   }
 
   saveGroup(): void {
-    console.log(this.seleccionado);
+    console.log(this.juego_seleccionado);
+
+    this.seleccionJuego();
+    JSON.stringify(this.posicion_juego_array)
+
     const data = {
       nombre_grupo: this.grupo.nombre_grupo,
       descripcion: this.grupo.descripcion,
-      juego: this.seleccionado,
+      juego: this.juegos[this.posicion_juego_array]
     };
 
     this.groupService.add(data).subscribe(
@@ -44,5 +49,14 @@ export class GroupCreationComponent implements OnInit {
         console.log(error);
       }
     );
+  }
+
+  seleccionJuego(): void {
+    for (let index = 0; index < this.juegos.length; index++) {
+      if (this.juego_seleccionado == this.juegos[index].id_juego) {
+        this.posicion_juego_array = index;
+      }
+
+    }
   }
 }
