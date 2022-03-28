@@ -1,34 +1,24 @@
 <div class="input-group rounded mt-3">
   <div class="form-outline d-flex centrar">
-    <div class="d-flex distancia">
-      <i class="bi bi-search"></i>
-      <select
-        name="seleccion"
-        class="form-select"
-        required
-        [(ngModel)]="juego_seleccionado"
-      >
-        <option [value]="'Any'">Any</option>
-        <option [value]="juego.nombre" *ngFor="let juego of juegos">
-          {{ juego.nombre }}
-        </option>
-      </select>
-      <button
-        (click)="listar_juego_seleccionado()"
-        type="button"
-        class="button register border-0 btn btn-primary btn ms-2"
-      >
-        Filtrar
-      </button>
-    </div>
+    <div class="d-flex distancia"></div>
     <div>
-      <a
-        routerLink="/group-creation"
-        class="button btn btn-primary"
-        role="button"
-        data-bs-toggle="button"
-        >Crear grupo</a
-      >
+      <div class="form-group">
+        <input
+          [formControl]="search"
+          type="text"
+          class="form-control"
+          placeholder="Search..."
+        />
+      </div>
+      <div>
+        <a
+          routerLink="/group-creation"
+          class="button btn btn-primary"
+          role="button"
+          data-bs-toggle="button"
+          >Crear grupo</a
+        >
+      </div>
     </div>
   </div>
 </div>

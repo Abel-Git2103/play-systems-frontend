@@ -13,11 +13,11 @@ import { GameExplorerComponent } from './home-components/game-explorer/game-expl
 import { ChatComponent } from './chat-components/chat/chat.component';
 import { GroupCreationComponent } from './group-creation/group-creation.component';
 import { ProfileComponent } from './profile/profile.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { authInterceptorProviders } from './helpers/auth.interceptor';
-
+import { BuscarPipe } from './pipes/buscar.pipe';
 
 @NgModule({
   declarations: [
@@ -33,6 +33,7 @@ import { authInterceptorProviders } from './helpers/auth.interceptor';
     ChatComponent,
     GroupCreationComponent,
     ProfileComponent,
+    BuscarPipe,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +41,7 @@ import { authInterceptorProviders } from './helpers/auth.interceptor';
     HttpClientModule,
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent],

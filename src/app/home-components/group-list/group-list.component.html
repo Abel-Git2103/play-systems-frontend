@@ -1,5 +1,9 @@
+<app-game-explorer (search)="handleSearch($event)"></app-game-explorer>
 <div class="container">
-  <div *ngFor="let group of available_groups"  class="card group-card">
+  <div
+    *ngFor="let group of available_groups | buscar: filtro_valor"
+    class="card group-card"
+  >
     <div class="row no-gutters">
       <div class="col-sm-4 card-img-position">
         <img
@@ -9,8 +13,8 @@
         />
       </div>
       <div class="col group-description">
-        <h5 class="card-title">{{group.nombre_grupo}}</h5>
-        <p class="card-text">{{group.descripcion}}</p>
+        <h5 class="card-title">{{ group.nombre_grupo }}</h5>
+        <p class="card-text">{{ group.descripcion }}</p>
         <a href="/chat" class="button btn btn-primary">Entrar</a>
       </div>
     </div>

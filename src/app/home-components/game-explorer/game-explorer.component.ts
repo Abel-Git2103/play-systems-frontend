@@ -1,5 +1,7 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { debounceTime } from 'rxjs/operators';
 import { Group } from 'src/app/models/group.model';
 import { GroupService } from 'src/app/service/group.service';
 import { JuegoService } from 'src/app/service/juego.service';
@@ -10,23 +12,13 @@ import { JuegoService } from 'src/app/service/juego.service';
   styleUrls: ['./game-explorer.component.css'],
 })
 export class GameExplorerComponent implements OnInit {
-  juegos: any = null;
-  @Output() juego_seleccionado: any;
-  grupo: Group = {};
-
-  submitted = false;
-
-  constructor(
-    private groupService: GroupService,
-    private router: Router,
-    private juegoService: JuegoService
-  ) {}
+  search = new FormControl('');
+  @Output('search') searchEmitter = new EventEmitter<string>();
+  constructor() {}
 
   ngOnInit(): void {
-    this.juegoService.retornar().subscribe((result) => (this.juegos = result));
-  }
-
-  listar_juego_seleccionado() {
-    console.log(this.juego_seleccionado);
+    this.search.valueChanges
+      .pipe(debounceTime(300))
+      .subscribe((value) => this.searchEmitter.emit(value));
   }
 }
