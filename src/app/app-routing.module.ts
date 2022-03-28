@@ -6,6 +6,7 @@ import { HomeComponent } from './home-components/home/home.component';
 import { LoginComponent } from './login-components/login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
+import { AuthGuardService } from './service/auth/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -23,18 +24,22 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [AuthGuardService],
   },
   {
     path: 'chat',
     component: ChatComponent,
+    canActivate: [AuthGuardService],
   },
   {
     path: 'profile',
     component: ProfileComponent,
+    canActivate: [AuthGuardService],
   },
   {
     path: 'group-creation',
     component: GroupCreationComponent,
+    canActivate: [AuthGuardService],
   },
 ];
 
