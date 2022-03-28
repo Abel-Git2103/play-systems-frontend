@@ -14,6 +14,9 @@ export class UserService {
   }
 
   update(id: any, data: any) {
-    return this.http.put(`${`api/usuarios`}/${id}`, data);
+    return this.http.put(
+      `${`https://play-systems.herokuapp.com/api/usuarios`}/${id}`,
+      data
+    );
   }
 }
