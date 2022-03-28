@@ -1,5 +1,26 @@
 <div class="input-group rounded mt-3">
-  <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-  <a routerLink="/group-creation" class="button btn btn-primary" role="button" data-bs-toggle="button">Crear grupo</a>
+  <div class="form-outline d-flex centrar">
+    <div class="d-flex distancia">
+      <i class="bi bi-search-heart"></i>
+      <select
+        name="seleccion"
+        class="form-select"
+        required
+        [(ngModel)]="juego_seleccionado"
+      >
+        <option [value]="juego.id_juego" *ngFor="let juego of juegos">
+          {{ juego.nombre }}
+        </option>
+      </select>
+    </div>
+    <div>
+      <a
+        routerLink="/group-creation"
+        class="button btn btn-primary"
+        role="button"
+        data-bs-toggle="button"
+        >Crear grupo</a
+      >
+    </div>
+  </div>
 </div>
-
