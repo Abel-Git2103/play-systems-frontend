@@ -10,11 +10,16 @@ export class GroupListComponent implements OnInit {
 
   @Input() available_groups: any = null;
 
+  juego_seleccionado: any;
+
   constructor(private groupService: GroupService) { }
 
   ngOnInit(): void {
     this.groupService.retornar()
-      .subscribe(result=> this.available_groups = result)
+      .subscribe(result=> this.available_groups = result);
+
   }
+
+
 
 }
