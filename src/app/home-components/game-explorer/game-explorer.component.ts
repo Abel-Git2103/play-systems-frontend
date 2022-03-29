@@ -13,6 +13,7 @@ export class GameExplorerComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    //Espera un valor de entrada en el buscador, se actualiza cada 300ms despues de cada entrada
     this.search.valueChanges
       .pipe(debounceTime(300))
       .subscribe((value) => this.searchEmitter.emit(value));
