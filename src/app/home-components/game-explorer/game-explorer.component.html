@@ -1,18 +1,18 @@
 <div class="input-group rounded mt-3">
-  <div class="form-outline border centrar">
+  <div class="form-outline centrar">
     <div class="d-flex">
-      <div class="form-group border d-flex distancia">
+      <div class="form-group d-flex distancia">
         <div><i class="bi bi-search"></i></div>
-        <div>
+        <div class="buscador">
           <input
             [formControl]="search"
             type="text"
             class="form-control"
-            placeholder="Search..."
+            placeholder="Buscar juego..."
           />
         </div>
       </div>
-      <div class="border">
+      <div>
         <a
           routerLink="/group-creation"
           class="button btn btn-primary"
