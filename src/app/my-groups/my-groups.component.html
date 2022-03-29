@@ -1,4 +1,5 @@
 <div *ngFor="let group of my_groups" class="card alinear m-2 group-card">
+  <a  [routerLink] ="['/chat', group.id_grupo]">
     <img
       class="card-img-top"
       src="{{ group.juego.imagen }}"
@@ -6,7 +7,7 @@
     />
     <div class="card-body">
       <p class="card-text">{{ group.nombre_grupo }}</p>
-      <button [routerLink] ="['/chat', group.id_grupo]" class="btn btn-primary boton">Entrar</button>
+      <p class="card-text">{{ group.juego.nombre}}</p>
     </div>
-
+  </a>
 </div>
