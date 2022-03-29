@@ -5,13 +5,13 @@
     <!-- Columna de los grupos a los que perteneces -->
     <div class="col-xxl-2 mygroups-nav">
       <div class="row">
-        <app-my-groups [chat]="this.chat"></app-my-groups>
+        <app-my-groups></app-my-groups>
       </div>
     </div>
 
     <!-- Columna del chat -->
     <div class="col chat-nav">
-      <app-messages [mensaje]="chat.mensaje" ></app-messages>
+      <app-messages [mensajes]="mensajes" [chat]="id" ></app-messages>
     </div>
   </div>
 </div>

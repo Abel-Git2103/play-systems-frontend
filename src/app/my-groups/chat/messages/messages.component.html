@@ -1,7 +1,7 @@
 <div class="bg-white m-3 contenedor-mensajes">
-  <div *ngFor="let mensaje of mensaje" class="mensajes m-2">
+  <div *ngFor="let mensaje of mensajes" class="mensajes m-2">
     <div>
-      <p><i>{{mensaje.hora}}</i><br/><b>{{mensaje.usuario.username}}</b>: {{mensaje.contenido}}</p>
+      <p><br/><b>sdadsasd</b>: {{mensaje.contenido}}</p>
       <div class="icono-basura">
         <button class="boton-eliminar">
           <i class="icono bi bi-trash3-fill"></i>
@@ -15,17 +15,19 @@
   <div>
     <form class="d-flex">
       <div>
+        <label class="form-label">*Nombre del grupo</label>
         <input
           type="text"
-          class="form-control caja-mensaje"
-          id="mensaje"
-          aria-describedby="emailHelp"
-          placeholder="Mensaje"
+          class="form-control"
+          placeholder="Nombre del grupo"
+          maxlength="20"
+          required
+          [(ngModel)]="message.contenido"
         />
       </div>
 
       <div>
-        <button type="button" class="btn btn-primary boton-enviar">
+        <button (click)="sendMessage()" type="button" class="btn btn-primary boton-enviar">
           Enviar
         </button>
       </div>

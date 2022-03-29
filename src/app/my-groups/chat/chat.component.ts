@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ChatService } from 'src/app/service/chat.service';
+import { MessageService } from 'src/app/service/message.service';
 
 @Component({
   selector: 'app-chat',
@@ -10,19 +11,19 @@ import { ChatService } from 'src/app/service/chat.service';
 export class ChatComponent implements OnInit {
 
   id: any = null;
-  chat: any = null;
+  mensajes: any = null;
 
-  constructor(private chatService: ChatService, private _route: ActivatedRoute, private router: Router) { }
+  constructor(private messageService: MessageService, private _route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.id = this._route.snapshot.paramMap.get('id');
     console.log(this.id);
 
-    this.chatService.getById(this.id)
+    this.messageService.getMessagesByChatId(this.id)
     .subscribe(
       (response) => {
         console.log(response);
-        this.chat = response;
+        this.mensajes = response;
       },
       (error) => {
         console.log(error);

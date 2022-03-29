@@ -7,6 +7,11 @@ import { Injectable } from '@angular/core';
 export class UserService {
   constructor(private http: HttpClient) {}
 
+
+  retornar() {
+    return this.http.get('https://play-systems.herokuapp.com/api/usuarios');
+  }
+
   getById(id: string) {
     return this.http.get(
       `https://play-systems.herokuapp.com/api/usuarios/${id}`
