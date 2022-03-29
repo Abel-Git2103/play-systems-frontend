@@ -14,29 +14,53 @@
                 <div class="col-sm-12 mb-4">
                   <div class="form-outline">
                     <label class="form-label">*Nombre del grupo</label>
-                    <input type="text" class="form-control" placeholder="Nombre del grupo" maxlength="20" required
-                      [(ngModel)]="grupo.nombre_grupo" />
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Nombre del grupo"
+                      maxlength="20"
+                      required
+                      [(ngModel)]="grupo.nombre_grupo"
+                    />
                   </div>
                 </div>
               </div>
               <div class="form-outline mb-4">
                 <label class="form-label">*Descripción</label>
-                <textarea class="descripcion form-control" placeholder="Describe el objetivo del grupo" required
-                  [(ngModel)]="grupo.descripcion"></textarea>
+                <textarea
+                  class="descripcion form-control"
+                  placeholder="Describe el objetivo del grupo"
+                  required
+                  [(ngModel)]="grupo.descripcion"
+                ></textarea>
               </div>
               <div class="form-outline mb-4">
                 <label class="form-label">*Juego</label>
-                <select name="miselect" class="select-css form-control" required [(ngModel)]="juego_seleccionado">
-                  <option>Selecciona un juego...</option>
-                  <option [value]="juego.id_juego" *ngFor="let juego of juegos">{{juego.nombre}}</option>
+                <select
+                  name="miselect"
+                  class="select-css form-control"
+                  required
+                  [(ngModel)]="juego_seleccionado"
+                >
+                  <option [value]="juego.id_juego" *ngFor="let juego of juegos">
+                    {{ juego.nombre }}
+                  </option>
                 </select>
               </div>
               <div class="d-flex justify-content-end pt-3">
-                <button type="button" class="btn btn-light btn" routerLink="/home">
+                <button
+                  type="button"
+                  class="btn btn-light btn"
+                  routerLink="/home"
+                >
                   Cancelar
                 </button>
-                <button type="button" (click)="saveGroup()" class="register border-0 btn btn-primary btn ms-2"
-                  routerLink="/chat">
+                <button
+                  type="button"
+                  (click)="saveGroup()"
+                  class="register border-0 btn btn-primary btn ms-2"
+                  routerLink="/chat"
+                >
                   Crear grupo
                 </button>
               </div>
