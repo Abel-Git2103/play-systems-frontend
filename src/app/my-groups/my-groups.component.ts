@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { GroupService } from 'src/app/service/group.service';
 
 @Component({
@@ -10,8 +11,10 @@ export class MyGroupsComponent implements OnInit {
 
   @Output() id_grupo: any;
   @Input() my_groups: any = null;
+  @Input() chat: any = null;
+  id: any = null;
 
-  constructor(private groupService: GroupService) { }
+  constructor(private groupService: GroupService, private _route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.groupService.retornar()

@@ -10,21 +10,24 @@ import { ChatService } from 'src/app/service/chat.service';
 export class ChatComponent implements OnInit {
 
   id: any = null;
-  chats: any = null;
+  chat: any = null;
 
-
-  constructor(private chatService: ChatService, private _route: ActivatedRoute) { }
+  constructor(private chatService: ChatService, private _route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.id = this._route.snapshot.paramMap.get('id');
     console.log(this.id);
+
     this.chatService.getById(this.id)
-    .subscribe(result=> this.chats = result);
-    console.log(this.chats.id_chat);
-  }
-
-  lista() {
-
+    .subscribe(
+      (response) => {
+        console.log(response);
+        this.chat = response;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
 }

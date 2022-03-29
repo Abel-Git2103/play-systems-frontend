@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Group } from '../models/group.model';
-import { Juego } from '../models/juego.model';
 import { GroupService } from '../service/group.service';
 import { JuegoService } from '../service/juego.service';
 
