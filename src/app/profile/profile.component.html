@@ -74,12 +74,13 @@
                   [(ngModel)]="usuario.email"
                 />
               </div>
+
               <!-- Save changes button-->
               <button
                 class="btn btn-primary button button"
                 type="button"
                 (click)="
-                  updateUser(usuario.nombre, usuario.apellidos, usuario.email)
+                  updateUser(usuario.nombre, usuario.apellidos, usuario.email, usuario.password)
                 "
               >
                 Guardar cambios

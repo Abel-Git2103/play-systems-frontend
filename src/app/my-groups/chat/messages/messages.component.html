@@ -1,7 +1,7 @@
 <div class="bg-white m-3 contenedor-mensajes">
-  <div class="mensajes m-2">
+  <div *ngFor="let mensaje of mensaje" class="mensajes m-2">
     <div>
-      <p><i>a</i><br /><b>aa</b>: sss</p>
+      <p><i>{{mensaje.hora}}</i><br/><b>{{mensaje.usuario.username}}</b>: {{mensaje.contenido}}</p>
       <div class="icono-basura">
         <button class="boton-eliminar">
           <i class="icono bi bi-trash3-fill"></i>

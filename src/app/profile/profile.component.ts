@@ -21,11 +21,12 @@ export class ProfileComponent implements OnInit {
       .subscribe((result) => (this.usuario = result));
   }
 
-  updateUser(nombre: string, apellidos: string, email: string): void {
+  updateUser(nombre: string, apellidos: string, email: string, password: string): void {
     const data = {
       apellidos: this.usuario.apellidos,
       email: this.usuario.email,
       nombre: this.usuario.nombre,
+      password: this.usuario.password
     };
 
     this.userService.update(this.usuario.username, data).subscribe(
