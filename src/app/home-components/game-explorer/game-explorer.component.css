@@ -1,0 +1,18 @@
+.button {
+  background-color: #e7552c;
+  border-color: #e7552c;
+}
+
+i {
+  font-size: 3.7vh;
+  color: #e7552c;
+}
+
+.centrar {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.distancia {
+  margin-right: 5vh;
+}
