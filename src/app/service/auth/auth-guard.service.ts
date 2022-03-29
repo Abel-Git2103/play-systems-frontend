@@ -10,7 +10,6 @@ export class AuthGuardService implements CanActivate {
   canActivate() {
     const username = window.sessionStorage.getItem('auth-username');
     // const role = window.sessionStorage.getItem('auth-role');
-    console.log(username);
     // console.log(role);
 
     if (!username) {

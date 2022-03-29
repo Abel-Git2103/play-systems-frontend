@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { GroupService } from 'src/app/service/group.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { GroupService } from 'src/app/service/group.service';
 })
 export class MyGroupsComponent implements OnInit {
 
+  @Output() id_grupo: any;
   @Input() my_groups: any = null;
 
   constructor(private groupService: GroupService) { }
@@ -15,6 +16,10 @@ export class MyGroupsComponent implements OnInit {
   ngOnInit(): void {
     this.groupService.retornar()
       .subscribe(result=> this.my_groups = result)
+  }
+
+  get_group_chat(id: any) {
+    console.log(id);
   }
 
 }
