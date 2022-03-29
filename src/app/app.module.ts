@@ -11,7 +11,7 @@ import { GroupListComponent } from './home-components/group-list/group-list.comp
 import { GroupCreationComponent } from './group-creation/group-creation.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { authInterceptorProviders } from './helpers/auth.interceptor';
 import { MessagesComponent } from './my-groups/chat/messages/messages.component';
@@ -43,7 +43,7 @@ import { GameExplorerComponent } from './home-components/game-explorer/game-expl
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [authInterceptorProviders],
+  providers: [authInterceptorProviders, DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

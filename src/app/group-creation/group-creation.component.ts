@@ -42,7 +42,7 @@ export class GroupCreationComponent implements OnInit {
       (response) => {
         console.log(response);
         this.submitted = true;
-        this.router.navigate(['/chat']);
+        this.router.navigate(['/home']);
       },
       (error) => {
         console.log(error);
