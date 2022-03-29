@@ -8,16 +8,19 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home-components/home/home.component';
 import { MyGroupsComponent } from './my-groups/my-groups.component';
 import { GroupListComponent } from './home-components/group-list/group-list.component';
-import { MessagesComponent } from './chat-components/messages/messages.component';
-import { GameExplorerComponent } from './home-components/game-explorer/game-explorer.component';
-import { ChatComponent } from './chat-components/chat/chat.component';
 import { GroupCreationComponent } from './group-creation/group-creation.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { authInterceptorProviders } from './helpers/auth.interceptor';
+<<<<<<< HEAD
+import { MessagesComponent } from './my-groups/chat/messages/messages.component';
+import { ChatComponent } from './my-groups/chat/chat.component';
+
+=======
 import { BuscarPipe } from './pipes/buscar.pipe';
+>>>>>>> d85accc2b1e733d7ef17a8027db09a66c87ff0d2
 
 @NgModule({
   declarations: [
@@ -29,7 +32,6 @@ import { BuscarPipe } from './pipes/buscar.pipe';
     MyGroupsComponent,
     GroupListComponent,
     MessagesComponent,
-    GameExplorerComponent,
     ChatComponent,
     GroupCreationComponent,
     ProfileComponent,
