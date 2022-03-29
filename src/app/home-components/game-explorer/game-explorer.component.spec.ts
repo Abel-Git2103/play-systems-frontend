@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { GameExplorerComponent } from './game-explorer.component';
 
 describe('GameExplorerComponent', () => {
@@ -8,9 +7,8 @@ describe('GameExplorerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GameExplorerComponent ]
-    })
-    .compileComponents();
+      declarations: [GameExplorerComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

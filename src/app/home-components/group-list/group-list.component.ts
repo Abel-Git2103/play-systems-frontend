@@ -7,16 +7,14 @@ import { GroupService } from 'src/app/service/group.service';
   styleUrls: ['./group-list.component.css'],
 })
 export class GroupListComponent implements OnInit {
-  // Raul
   @Input() available_groups: any = null;
   juego_seleccionado: any;
-  // Edgar
+
   filtro_valor = '';
 
   constructor(private groupService: GroupService) {}
 
   ngOnInit(): void {
-    // Raul
     this.groupService
       .retornar()
       .subscribe((result) => (this.available_groups = result));
