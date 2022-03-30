@@ -32,6 +32,7 @@ export class ProfileComponent implements OnInit {
     this.userService.update(this.usuario.username, data).subscribe(
       (response) => {
         console.log(response);
+        alert("Usuario modificado con éxito.")
         this.submitted = true;
       },
       (error) => {
