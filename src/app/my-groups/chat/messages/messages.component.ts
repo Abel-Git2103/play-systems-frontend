@@ -66,4 +66,14 @@ export class MessagesComponent implements OnInit {
     this.contenido = (document.getElementById("contenido") as HTMLInputElement).value;
   }
 
+  deleteMessage(id: any): void {
+    this.messageService.delete(id).subscribe(
+      (response) => {
+        console.log(response);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
 }

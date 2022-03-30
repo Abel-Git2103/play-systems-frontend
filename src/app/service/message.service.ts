@@ -32,4 +32,14 @@ export class MessageService {
         })
       );
   }
+
+  delete(id: any) {
+    return this.http.delete(`${`https://play-systems.herokuapp.com/api/mensajes`}/${id}`)
+    .pipe(
+      //cada vez que se ejecute guardara los datos que lanza
+      tap(() => {
+        this._refresh$.next();
+      })
+    );
+  }
 }
