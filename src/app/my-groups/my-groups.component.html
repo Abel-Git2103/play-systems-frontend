@@ -1,13 +1,13 @@
-<div *ngFor="let group of my_groups" class="card alinear m-2 group-card">
-  <a  [routerLink] ="['/chat', group.id_grupo]">
+<div *ngFor="let unido of seune" class="card alinear m-2 group-card">
+  <a  [routerLink] ="['/chat', unido.grupo.id_grupo]">
     <img
       class="card-img-top"
-      src="{{ group.juego.imagen }}"
+      src="{{ unido.grupo.juego.imagen }}"
       alt="Card image cap"
     />
     <div class="card-body">
-      <p class="card-text">{{ group.nombre_grupo }}</p>
-      <p class="card-text">{{ group.juego.nombre}}</p>
+      <p class="card-text">{{ unido.grupo.nombre_grupo }}</p>
+      <p class="card-text">{{ unido.grupo.juego.nombre}}</p>
     </div>
   </a>
 </div>
