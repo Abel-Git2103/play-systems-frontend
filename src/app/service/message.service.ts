@@ -22,6 +22,10 @@ export class MessageService {
     );
   }
 
+  getById(id: any) {
+    return this.http.get(`https://play-systems.herokuapp.com/api/mensajes/${id}`);
+  }
+
   add(data: any) {
     return this.http
       .post(`https://play-systems.herokuapp.com/api/mensajes`, data)
@@ -34,12 +38,6 @@ export class MessageService {
   }
 
   delete(id: any) {
-    return this.http.delete(`${`https://play-systems.herokuapp.com/api/mensajes`}/${id}`)
-    .pipe(
-      //cada vez que se ejecute guardara los datos que lanza
-      tap(() => {
-        this._refresh$.next();
-      })
-    );
+    return this.http.delete(`${`https://play-systems.herokuapp.com/api/mensajes`}/${id}`);
   }
 }

@@ -21,17 +21,20 @@ export class MessagesComponent implements OnInit {
   usuario: any;
   submitted = false;
 
+  message:any;
+
   constructor(private messageService: MessageService, private userService: UserService, private datePipe: DatePipe) { }
 
   ngOnInit(): void {
     this.userService.retornar()
       .subscribe((response) => (this.usuarios = response));
+
+
   }
 
   sendMessage(): void {
-    this.getUsuario();
     this.getContenido();
-
+    this.getUsuario();
     console.log(this.contenido);
 
     const data = {
@@ -67,13 +70,26 @@ export class MessagesComponent implements OnInit {
   }
 
   deleteMessage(id: any): void {
-    this.messageService.delete(id).subscribe(
-      (response) => {
-        console.log(response);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+    this.message = this.messageService.getById(id);
+
+    console.log(this.message);
+    console.log(this.messageService.getById(id));
+
+    this.getUsuario();
+
+    //if(this.message.usuario.username == this.usuario) {
+      this.messageService.delete(id).subscribe(
+        (response) => {
+          console.log(response);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+  //  } else {
+    //  alert("No puedes eliminar los mensajes de otros usuarios.")
+  //  }
+
+
   }
 }

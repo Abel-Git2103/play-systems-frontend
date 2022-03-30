@@ -19,7 +19,7 @@ export class ChatComponent implements OnInit, OnDestroy {
     private messageService: MessageService,
     private _route: ActivatedRoute,
     private router: Router
-  ) {}
+  ) { }
   //Implementamos el Ondestroy para liberar memoria
   ngOnDestroy(): void {
     console.log('Observable cerrado');
@@ -29,16 +29,18 @@ export class ChatComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.id = this._route.snapshot.paramMap.get('id');
     console.log(this.id);
+    setInterval(() => {
+      this.messageService.getMessagesByChatId(this.id).subscribe(
+        (response) => {
+          console.log(response);
+          this.mensajes = response;
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    }, 2000);
 
-    this.messageService.getMessagesByChatId(this.id).subscribe(
-      (response) => {
-        console.log(response);
-        this.mensajes = response;
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
 
     //Cada vez que se añadan mensajes se hara un next i ejecutara este codigo
     this.suscription = this.messageService.refresh$.subscribe(() => {
@@ -52,5 +54,9 @@ export class ChatComponent implements OnInit, OnDestroy {
         }
       );
     });
+
   }
+
+
+
 }
