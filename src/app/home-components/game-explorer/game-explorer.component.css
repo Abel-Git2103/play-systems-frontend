@@ -8,15 +8,19 @@ i {
   color: #e7552c;
 }
 
-.centrar {
+.centrar{
   margin-left: auto;
   margin-right: auto;
 }
 
 .distancia {
-  margin-right: 5vh;
+  margin-right: 8vw;
 }
 
 .buscador {
-  width: 40vh;
+  width: 30vw;
 }
+
+
+
+
